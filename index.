@@ -295,17 +295,29 @@ footer{background:#080602;padding:3.5rem 5vw 1.8rem;}
       <div class="ci">&#128216; <a href="https://facebook.com" target="_blank">Follow us on Facebook</a></div>
     </div>
   </div>
-  <div class="cr2">
-    <h3>Request a Free Quote</h3>
+ <div class="cr2">
+  <h3>Request a Free Quote</h3>
+  <form id="qf">
+    <input type="hidden" name="_subject" value="New quote request – D&V Custom Tile & Marble">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
     <div class="fr">
-      <div class="ff"><label>First Name</label><input type="text" placeholder="John"></div>
-      <div class="ff"><label>Last Name</label><input type="text" placeholder="Smith"></div>
-      <div class="ff"><label>Email</label><input type="email" placeholder="john@email.com"></div>
-      <div class="ff"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"></div>
-      <div class="ff fu"><label>Project Type</label><select><option value="">Select...</option><option>Bathroom Renovation</option><option>Shower / Wet Area</option><option>Kitchen / Backsplash</option><option>Natural Stone / Marble</option><option>Flooring</option><option>Commercial Project</option><option>Other</option></select></div>
-      <div class="ff fu"><label>Tell Us About Your Project</label><textarea placeholder="Space, timeline, budget..."></textarea></div>
+      <div class="ff"><label>First Name</label><input type="text" name="first_name" placeholder="John" required></div>
+      <div class="ff"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
+      <div class="ff"><label>Email</label><input type="email" name="email" placeholder="john@email.com" required></div>
+      <div class="ff"><label>Phone</label><input type="tel" name="phone" placeholder="(609) 000-0000"></div>
+      <div class="ff fu"><label>Project Type</label>
+        <select name="project_type">
+          <option value="">Select...</option><option>Bathroom Renovation</option><option>Shower / Wet Area</option><option>Kitchen / Backsplash</option><option>Natural Stone / Marble</option><option>Flooring</option><option>Commercial Project</option><option>Other</option>
+        </select></div>
+      <div class="ff fu"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Space, timeline, budget..."></textarea></div>
     </div>
-    <button class="btn by" onclick="this.textContent='Sent! We will be in touch.';this.style.background='#4a7a4a';this.disabled=true;">Send My Request</button>
+    <button type="submit" class="btn by" id="qb">Send My Request</button>
+    <p id="qm" role="status"></p>
+  </form>
+</div>    
+<button class="btn by" onclick="this.textContent='Sent! We will be in touch.';this.style.background='#4a7a4a';this.disabled=true;">Send My Request</button>
   </div>
 </section>
 <footer>
